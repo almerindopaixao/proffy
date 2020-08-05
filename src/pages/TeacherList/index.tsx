@@ -41,7 +41,7 @@ export default function TeacherList() {
               { value: '3', label: 'Quarta-feira'},
               { value: '4', label: 'Quinta-feira'},
               { value: '5', label: 'Sexta-feira'},
-              { value: '5', label: 'Sábado'},
+              { value: '6', label: 'Sábado'},
             ]}
           />
           
