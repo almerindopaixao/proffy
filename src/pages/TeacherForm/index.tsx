@@ -11,6 +11,11 @@ import './styles.css';
 
 export default function TeacherForm() {
 
+  const [name, setName] = useState('');
+  const [avatar, setAvatar] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
+  const [bio, setBio] = useState('');
+
   const [scheduleItems, setScheduleItems] = useState([
     { week_day: 0, from: '', to: ''},
   ]);
@@ -37,10 +42,31 @@ export default function TeacherForm() {
         <fieldset>
           <legend>Seus dados</legend>
 
-          <Input name="name" label="Nome completo"/>
-          <Input name="avatar" label="Avatar"/>
-          <Input name="whatsapp" label="Whatsapp"/>
-          <Textarea name="bio" label="Biografia" />
+          <Input 
+            name="name" 
+            value={name} 
+            onChange={(e) => setName(e.target.value)} 
+            label="Nome completo"
+          />
+          <Input 
+            name="avatar" 
+            label="Avatar"
+            value={avatar}
+            onChange={(e) => setAvatar(e.target.value)}
+          />
+          <Input 
+            name="whatsapp" 
+            label="Whatsapp"
+            value={whatsapp}
+            onChange={(e) => setWhatsapp(e.target.value)}
+          />
+          <Textarea 
+            name="bio" 
+            label="Biografia"
+            value={bio} 
+            onChange={(e) => setBio(e.target.value)}
+          />
+
         </fieldset>
 
         <fieldset>
